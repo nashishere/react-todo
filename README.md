@@ -1,2 +1,3 @@
 # react-todo
-Todo app written by React
+A Sample Todo App written by React
+

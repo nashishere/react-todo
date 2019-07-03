@@ -7,8 +7,8 @@ import {withTranslation} from "react-i18next";
 import {createBrowserHistory} from "history";
 
 import store from "./state/reducers";
-
 import AppRoutes from "./App.Routes";
+import {Header} from "./components/parts";
 
 import "./App.scss";
 
@@ -18,7 +18,10 @@ const AppComponent = () => {
   return (
     <Provider store={store}>
       <Router history={history}>
-        <AppRoutes />
+        <React.Fragment>
+          <Header />
+          <AppRoutes />
+        </React.Fragment>
       </Router>
     </Provider>
   );

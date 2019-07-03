@@ -1,3 +1,8 @@
 {
-  "translation": {}
+  "translation": {
+    "header": {
+      "title": "Welcome",
+      "change_language": "Toggle language"
+    }
+  }
 }

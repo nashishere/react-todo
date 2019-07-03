@@ -3,6 +3,7 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.js",
+  mode: "development",
   module: {
     rules: [
       {
@@ -11,13 +12,11 @@ module.exports = {
         loader: "babel-loader",
         options: {
           presets: ["@babel/env"]
-        },
-        sideEffects: false
+        }
       },
       {
         test: /\.(s*)css$/,
         use: ["style-loader", "css-loader", "sass-loader"],
-        sideEffects: false
       }
     ]
   },
@@ -32,9 +31,6 @@ module.exports = {
   optimization: {
     usedExports: true,
   },
-  performance: {
-    hints: "warning"
-  },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
     port: 3000,
@@ -42,5 +38,8 @@ module.exports = {
     historyApiFallback: true,
     hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+  ]
 };

@@ -4,26 +4,70 @@
   "description": "A Todo Application written by React",
   "main": "index.js",
   "repository": "https://github.com/nashishere/react-todo.git",
-  "author": "Serhat Cevik <serhat.cevik@outlook.com>",
+  "author": "Serhat Çevik <serhat.cevik@outlook.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --ext .js --fix",
+    "test": "jest",
+    "deploy": "webpack --mode production"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@types/jest": "^24.0.15",
+    "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^6.0.1",
+    "eslint-plugin-flowtype": "^3.11.1",
+    "eslint-plugin-react": "^7.14.2",
+    "flow-bin": "^0.102.0",
+    "jest": "^24.8.0",
+    "jest-environment-enzyme": "^7.0.2",
+    "jest-enzyme": "^7.0.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "classnames": "^2.2.6",
+    "history": "^4.9.0",
+    "i18next": "^17.0.6",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "popper.js": "^1.15.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-i18next": "^10.11.3",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jest-setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "collectCoverage": true
   }
 }

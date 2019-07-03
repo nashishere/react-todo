@@ -14,9 +14,14 @@
 .idea/react-todo.iml
 .idea/vcs.xml
 .idea/watcherTasks.xml
+.idea/jsLibraryMappings.xml
+.idea/inspectionProfiles/Project_Default.xml
 
 # Node modules directory
 node_modules
+
+# Dist directory and its content
+dist
 
 # Generated files
 .idea/**/contentModel.xml

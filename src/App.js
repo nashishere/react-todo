@@ -3,7 +3,6 @@
 import * as React from "react";
 import {Router} from "react-router-dom";
 import {Provider} from "react-redux";
-import {withTranslation} from "react-i18next";
 import {createBrowserHistory} from "history";
 
 import store from "./state/reducers";
@@ -14,19 +13,15 @@ import "./App.scss";
 
 const history = createBrowserHistory();
 
-const AppComponent = () => {
-  return (
-    <Provider store={store}>
-      <Router history={history}>
-        <React.Fragment>
-          <Header />
-          <AppRoutes />
-        </React.Fragment>
-      </Router>
-    </Provider>
-  );
-};
-
-const App = withTranslation()(AppComponent);
+const App = () => (
+  <Provider store={store}>
+    <Router history={history}>
+      <React.Fragment>
+        <Header />
+        <AppRoutes />
+      </React.Fragment>
+    </Router>
+  </Provider>
+);
 
 export default App;

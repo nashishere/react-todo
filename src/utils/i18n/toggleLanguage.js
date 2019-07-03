@@ -1,6 +1,6 @@
 /* @flow */
 
-import i18n from "i18next";
+import i18n from "./i18n";
 
 export default function toggleLanguage() {
   const activeLanguages = ["en", "nl", "de"];

@@ -1,17 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
-
 .todo-app-header {
-  @extend .navbar;
-  @extend .navbar-dark;
-  @extend .bg-primary;
-
-  & > &-title {
-    @extend .navbar-brand;
-  }
-
-  & > &-change-language {
-    @extend .btn;
-    @extend .btn-sm;
-    @extend .btn-light;
-  }
+  & > &-title {}
+  & > &-change-language {}
 }

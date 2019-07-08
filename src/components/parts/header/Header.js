@@ -5,7 +5,7 @@ import {useTranslation} from "react-i18next";
 import {Link} from "react-router-dom";
 
 import {RoutePaths} from "../../../constants";
-import {toggleLanguage} from "../../../utils/i18n";
+import {LanguageSelector} from "../index";
 
 import "./Header.scss";
 
@@ -19,11 +19,7 @@ const Header = () => {
         {t("header.title")}
       </Link>
 
-      <a className="todo-app-header-change-language"
-         type="link"
-         onClick={toggleLanguage}>
-        {t("header.change_language")}
-      </a>
+      <LanguageSelector />
     </div>
   );
 };

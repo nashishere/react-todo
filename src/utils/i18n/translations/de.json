@@ -1,8 +1,8 @@
 {
   "translation": {
+    "long_name": "Deutsch",
     "header": {
-      "title": "Willkommen",
-      "change_language": "Sprache umschalten"
+      "title": "Todo App"
     }
   }
 }

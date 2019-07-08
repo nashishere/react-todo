@@ -1,8 +1,8 @@
 {
   "translation": {
+    "long_name": "Nederlands",
     "header": {
-      "title": "Welkom",
-      "change_language": "Wissel van taal"
+      "title": "Todo App"
     }
   }
 }

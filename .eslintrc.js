@@ -4,32 +4,37 @@ module.exports = {
     "node": true,
     "commonjs": true,
     "es6": true,
-    "jest": true
+    "jest": true,
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:flowtype/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
   ],
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaVersion": 2018,
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true
+      "jsx": true,
     },
-    "sourceType": "module"
+    "sourceType": "module",
   },
   "plugins": [
     "react",
-    "flowtype"
   ],
+  "settings": {
+    "react": {
+      "version": "detect",
+    },
+  },
   "rules": {
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "double"],
+    "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "react/jsx-indent": ["error", 2],
     "react/jsx-uses-react": ["warn"],
     "react/jsx-uses-vars": ["error"],
     "react/jsx-first-prop-new-line": ["error", "never"],
-    "react/jsx-indent-props": ["error", "first"]
+    "react/jsx-indent-props": ["error", "first"],
   }
 };

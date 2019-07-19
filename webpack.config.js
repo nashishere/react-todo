@@ -1,45 +1,42 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
+  entry: './src/index.tsx',
+  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.([tj])sx?$/,
         exclude: /(node_modules)/,
-        loader: "babel-loader",
-        options: {
-          presets: ["@babel/env"]
-        }
+        loader: 'awesome-typescript-loader',
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
       },
       {
         test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      }
-    ]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
   },
+  devtool: 'source-map',
   resolve: {
-    extensions: ["*", ".js"]
+    extensions: ['*', '.js', '.ts', '.tsx'],
   },
   output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
-  },
-  optimization: {
-    usedExports: true,
+    path: path.resolve(__dirname, 'dist/'),
+    publicPath: '/dist/',
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    contentBase: path.join(__dirname, 'public/'),
     port: 3000,
-    publicPath: "http://localhost:3000/dist/",
+    publicPath: 'http://localhost:3000/dist/',
     historyApiFallback: true,
-    hotOnly: true
+    hotOnly: true,
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-  ]
+  plugins: [new webpack.HotModuleReplacementPlugin(), new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)],
 };

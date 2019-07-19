@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import './LanguageSelector.scss';
 
-const LanguageSelector = (): React.ReactElement => {
+export default function LanguageSelector(): React.ReactElement {
   const { t, i18n } = useTranslation();
 
   const currentLanguage = i18n.language;
@@ -26,6 +26,4 @@ const LanguageSelector = (): React.ReactElement => {
       </option>
     </select>
   );
-};
-
-export default LanguageSelector;
+}

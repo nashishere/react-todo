@@ -2,6 +2,6 @@ import * as React from 'react';
 
 import './Login.scss';
 
-const Login = (): React.ReactElement => <div />;
-
-export default Login;
+export default function Login(): React.ReactElement {
+  return <div />;
+}

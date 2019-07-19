@@ -11,15 +11,15 @@ import './App.scss';
 
 const history = createBrowserHistory();
 
-const App = (): React.ReactElement => (
-  <Provider store={store}>
-    <Router history={history}>
-      <React.Fragment>
-        <Header />
-        <AppRoutes />
-      </React.Fragment>
-    </Router>
-  </Provider>
-);
-
-export default App;
+export default function App(): React.ReactElement {
+  return (
+    <Provider store={store}>
+      <Router history={history}>
+        <React.Fragment>
+          <Header />
+          <AppRoutes />
+        </React.Fragment>
+      </Router>
+    </Provider>
+  );
+}

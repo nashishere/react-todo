@@ -71,7 +71,7 @@
       "enzyme-to-json/serializer"
     ],
     "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+      "^.+\\.(t)sx?$": "ts-jest"
     },
     "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",

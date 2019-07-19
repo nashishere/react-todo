@@ -1,7 +1,7 @@
 import { Action, Reducer } from 'redux';
 import { Moment } from 'moment';
 
-import { ThreeStateBoolean } from '../../models';
+import { ThreeStateBoolean } from '../../enums';
 
 export interface State {
   tasks: {

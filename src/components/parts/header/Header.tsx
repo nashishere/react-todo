@@ -7,7 +7,7 @@ import { LanguageSelector } from '..';
 
 import './Header.scss';
 
-const Header = (): React.ReactElement => {
+export default function Header(): React.ReactElement {
   const { t } = useTranslation();
 
   return (
@@ -19,6 +19,4 @@ const Header = (): React.ReactElement => {
       <LanguageSelector />
     </div>
   );
-};
-
-export default Header;
+}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 
-const RouteWithAuth = ({ component: OriginalComponent, ...rest }): React.ReactElement => {
+export default function RouteWithAuth({ component: OriginalComponent, ...rest }): React.ReactElement {
   // TODO Add authentication control here
   const authenticated = true;
 
@@ -25,6 +25,4 @@ const RouteWithAuth = ({ component: OriginalComponent, ...rest }): React.ReactEl
       }
     />
   );
-};
-
-export default RouteWithAuth;
+}

@@ -1,0 +1,13 @@
+@import "../../../styles/constants";
+@import "../../../styles/mixins";
+
+.todo-app-footer {
+  display: flex;
+  justify-content: center;
+
+  padding: $defaultPadding;
+
+  & > &-subtitle {
+    @include font($defaultFontSize * 0.9);
+  }
+}

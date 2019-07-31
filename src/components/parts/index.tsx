@@ -1,4 +1,5 @@
+import Footer from './footer/Footer';
 import Header from './header/Header';
 import LanguageSelector from './language-selector/LanguageSelector';
 
-export { LanguageSelector, Header };
+export { Footer, Header, LanguageSelector };

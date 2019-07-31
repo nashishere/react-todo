@@ -1,0 +1,7 @@
+@import "../../../styles/constants";
+@import "../../../styles/mixins";
+
+.todo-app-page-list {
+  display: flex;
+  flex-grow: 1;
+}

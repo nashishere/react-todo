@@ -8,7 +8,7 @@ export default function LanguageSelector(): React.ReactElement {
 
   const currentLanguage = i18n.language;
 
-  const handleChangeLanguage = (event: React.SyntheticEvent<HTMLSelectElement>) => {
+  const handleChangeLanguage = (event: React.SyntheticEvent<HTMLSelectElement>): void => {
     const nextLanguage = event.currentTarget.options[event.currentTarget.selectedIndex].value;
     i18n.changeLanguage(nextLanguage);
   };

@@ -1,0 +1,45 @@
+@import "constants";
+
+@mixin media($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin antialias {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font($size: false, $color: false, $weight: false,  $lineHeight: false) {
+  font-family: 'Open Sans', sans-serif;
+  @include antialias();
+
+  @if $size { font-size: $size; }
+  @if $color { color: $color; }
+  @if $weight { font-weight: $weight; }
+  @if $lineHeight { line-height: $lineHeight; }
+}
+
+@mixin header() {
+  @include font($defaultFontSize * 2, $primaryColor, 700);
+}
+
+@mixin title() {
+  @include font($defaultFontSize * 1.6, $alternateColor, 400);
+}
+
+@mixin subtitle() {
+  @include font($defaultFontSize * 1.2, desaturate($alternateColor, 20%), 400);
+}
+
+@mixin text() {
+  @include font($defaultFontSize, $textColor, 400);
+}

@@ -1,6 +1,6 @@
 enum ThreeStateBoolean {
-  TRUE,
   FALSE,
+  TRUE,
   INDETERMINATE,
 }
 

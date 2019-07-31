@@ -5,7 +5,7 @@ import { createBrowserHistory } from 'history';
 
 import store from './state/reducers';
 import AppRoutes from './App.Routes';
-import { Header } from './components/parts';
+import { Footer, Header } from './components/parts';
 
 import './App.scss';
 
@@ -18,6 +18,7 @@ export default function App(): React.ReactElement {
         <React.Fragment>
           <Header />
           <AppRoutes />
+          <Footer />
         </React.Fragment>
       </Router>
     </Provider>

@@ -1,4 +1,19 @@
+@import "../../../styles/constants";
+@import "../../../styles/mixins";
+
 .todo-app-header {
-  & > &-nav-wrapper {}
-  & > &-title {}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: $defaultPadding;
+
+  & > &-title {
+    @include header();
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
